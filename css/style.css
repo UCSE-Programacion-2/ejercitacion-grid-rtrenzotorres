@@ -26,3 +26,12 @@ img {
    Aplicar Grid en .exercice y .excercice-incomplete
    con enfoque Mobile First + media queries.
 */
+.exercice {
+  display: grid;
+  gap: 1rem;
+}
+
+.excercice-incomplete {
+  display: grid;
+  gap: 0.5rem;
+}
