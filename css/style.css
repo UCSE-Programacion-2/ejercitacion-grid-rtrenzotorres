@@ -26,3 +26,53 @@ img {
    Aplicar Grid en .exercice y .excercice-incomplete
    con enfoque Mobile First + media queries.
 */
+
+.exercice {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.excercice-incomplete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .exercice {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.excercice-incomplete {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "uno dos"
+    "tres cuatro";
+  gap: 0.5rem;
+}
+
+.grid-one {
+  grid-area: cuatro;
+}
+
+.grid-two {
+  grid-area: uno;
+}
+
+.grid-three {
+  grid-area: dos;
+}
+
+.grid-four {
+  grid-area: tres;
+}
+
+.excercice-incomplete img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
